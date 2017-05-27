@@ -2,7 +2,7 @@
  * @Author: yewei 
  * @Date: 2017-05-26 15:40:47 
  * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 14:27:06
+ * @Last Modified time: 2017-05-27 14:22:02
  * 
  * 首页
  */
@@ -47,8 +47,8 @@ export default class MainView extends Component {
         console.log(this.props);
         let boxs = this.state.days.map((value, key) => {
             let showIcon = value.isFA ?
-                <IconFA size={value.size} name={value.icon} style={[styles.boxIcon, { color: value.color }]} /> :
-                <Icon size={value.size} name={value.icon} style={[styles.boxIcon, { color: value.color }]} />;
+                <IconFA size={value.size} name={value.icon} /> :
+                <Icon />;
             return (
                 <TouchableOpacity
                     style={[styles.touchBox, key % 3 == 2 ? styles.touchBox1 : styles.touchBox2]} // 最后一个只有下边框，没有右边框
@@ -58,7 +58,6 @@ export default class MainView extends Component {
                 >
                     <View style={styles.boxContainer}>
                         <Text style={styles.boxText}>Day{key + 1}</Text>
-                        {showIcon}
                     </View>
                 </TouchableOpacity>
             );
@@ -93,17 +92,6 @@ export default class MainView extends Component {
 }
 
 const styles = StyleSheet.create({
-    boxIcon: {
-        position: "relative",
-    },
-    boxText: {
-        position: "absolute",
-        bottom: 15,
-        width: Utils.size.width / 3 - Utils.pixel,
-        textAlign: "center",
-        left: 0,
-        backgroundColor: "transparent"
-    },
     boxContainer: {
         alignItems: "center",
         justifyContent: "center",

@@ -95,6 +95,7 @@ export default class MainView extends Component {
 const styles = StyleSheet.create({
     boxIcon: {
         position: "relative",
+        // top: -10
     },
     boxText: {
         position: "absolute",

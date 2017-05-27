@@ -2,7 +2,7 @@
  * @Author: yewei 
  * @Date: 2017-05-26 15:40:47 
  * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 14:27:06
+ * @Last Modified time: 2017-05-27 14:18:00
  * 
  * 首页
  */
@@ -20,8 +20,6 @@ import {
     Image
 } from 'react-native';
 import Swiper from 'react-native-swiper';
-import Icon from 'react-native-vector-icons/Ionicons';
-import IconFA from 'react-native-vector-icons/FontAwesome';
 
 import Utils from '../utils/utils';
 import DAYS from '../data/days'; // 每天的数据
@@ -46,9 +44,6 @@ export default class MainView extends Component {
     render() {
         console.log(this.props);
         let boxs = this.state.days.map((value, key) => {
-            let showIcon = value.isFA ?
-                <IconFA size={value.size} name={value.icon} style={[styles.boxIcon, { color: value.color }]} /> :
-                <Icon size={value.size} name={value.icon} style={[styles.boxIcon, { color: value.color }]} />;
             return (
                 <TouchableOpacity
                     style={[styles.touchBox, key % 3 == 2 ? styles.touchBox1 : styles.touchBox2]} // 最后一个只有下边框，没有右边框
@@ -57,8 +52,7 @@ export default class MainView extends Component {
                     onPress={() => this._jumpToDay(key)}
                 >
                     <View style={styles.boxContainer}>
-                        <Text style={styles.boxText}>Day{key + 1}</Text>
-                        {showIcon}
+
                     </View>
                 </TouchableOpacity>
             );
@@ -93,22 +87,11 @@ export default class MainView extends Component {
 }
 
 const styles = StyleSheet.create({
-    boxIcon: {
-        position: "relative",
-    },
-    boxText: {
-        position: "absolute",
-        bottom: 15,
-        width: Utils.size.width / 3 - Utils.pixel,
-        textAlign: "center",
-        left: 0,
-        backgroundColor: "transparent"
-    },
     boxContainer: {
         alignItems: "center",
         justifyContent: "center",
-        width: Utils.size.width / 3 - Utils.pixel,
-        height: Utils.size.width / 3 - Utils.pixel,
+        width: Util.size.width / 3,
+        height: Util.size.width / 3,
     },
     touchBox: {
         width: Utils.size.width / 3 - Utils.pixel, // 减去边框的宽度

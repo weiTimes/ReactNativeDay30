@@ -2,7 +2,7 @@
  * @Author: yewei 
  * @Date: 2017-05-26 15:40:47 
  * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 14:27:06
+ * @Last Modified time: 2017-05-27 14:26:24
  * 
  * 首页
  */
@@ -95,6 +95,7 @@ export default class MainView extends Component {
 const styles = StyleSheet.create({
     boxIcon: {
         position: "relative",
+        top: -10
     },
     boxText: {
         position: "absolute",
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
     },
     boxContainer: {
         alignItems: "center",
-        justifyContent: "center",
+        // justifyContent: "center",
         width: Utils.size.width / 3 - Utils.pixel,
         height: Utils.size.width / 3 - Utils.pixel,
     },
