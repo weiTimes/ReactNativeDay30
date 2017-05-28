@@ -2,7 +2,7 @@
  * @Author: yewei 
  * @Date: 2017-05-27 10:52:19 
  * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 18:37:05
+ * @Last Modified time: 2017-05-27 18:24:33
  * 
  * day01 计时器  A stop watch
  */
@@ -41,7 +41,6 @@ export default class Day1 extends Component {
                 { title: "", time: "" },
                 { title: "", time: "" }
             ],
-            recordTime: 0,
             recordCounter: 0,
             timeAccumulation: 0,
             intialTime: 0,
@@ -58,8 +57,6 @@ export default class Day1 extends Component {
         if (recordCounter < 8) {
             record.pop();
         }
-        console.log(this.state.currentTime);
-
         record.unshift({ title: '计次', time: this.state.sectionTime });
         this.setState({
             recordTime: this.state.timeAccumulation + this.state.currentTime - this.state.initialTime,
@@ -138,9 +135,7 @@ export default class Day1 extends Component {
             }, 10);
     }
     _stopWatch() {
-        this.setState({
-            stopWatch: true
-        });
+
     }
 
     render() {

@@ -2,7 +2,7 @@
  * @Author: yewei 
  * @Date: 2017-05-27 10:52:19 
  * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 18:37:05
+ * @Last Modified time: 2017-05-27 18:32:44
  * 
  * day01 计时器  A stop watch
  */
@@ -33,7 +33,7 @@ export default class Day1 extends Component {
             totalTime: "00:00.00",
             sectionTime: "00:00.00",
             record: [
-                { title: "", time: "" },
+                { title: "", time: "sdfsdf" },
                 { title: "", time: "" },
                 { title: "", time: "" },
                 { title: "", time: "" },

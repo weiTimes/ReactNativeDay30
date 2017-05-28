@@ -1,10 +1,10 @@
 /*
  * @Author: yewei 
  * @Date: 2017-05-27 14:47:29 
- * @Last Modified by: yewei
- * @Last Modified time: 2017-05-27 14:47:56
+ * @Last Modified by:   yewei 
+ * @Last Modified time: 2017-05-27 14:47:29 
  * 
- * 首页显示的遍历天数的数组
+ * 首页显示的遍历天数
  */
 
 
